@@ -1,3 +1,5 @@
+
+# important libraries 
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -42,7 +44,7 @@ def data_gen(x):
     return x_validate
 
 
-@st.cache
+@st.cache # converting the image into numerical data
 def data_gen_(img):
     img = img.reshape(100, 75)
     x_test = np.asarray(img.tolist())
@@ -56,7 +58,7 @@ def data_gen_(img):
 
 def load_models():
 
-    model = load_model(MODELSPATH + 'model.h5')
+    model = load_model(MODELSPATH + 'model.h5')  # importing the model in the code
     return model
 
 
